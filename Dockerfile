@@ -22,7 +22,7 @@ RUN docker-php-ext-install -j$(nproc) iconv pdo pdo_mysql mysqli gd
 RUN docker-php-ext-configure gd --with-jpeg=/usr/include/ --with-freetype=/usr/include/
 
 RUN curl -J -L -s -k \
-    'https://github.com/omeka/omeka-s/releases/download/v3.1.1/omeka-s-3.1.1.zip' \
+    'https://github.com/omeka/omeka-s/releases/download/v3.2.3/omeka-s-3.2.3.zip' \
     -o /var/www/omeka-s.zip \
 &&  unzip -q /var/www/omeka-s.zip -d /var/www/ \
 &&  rm /var/www/omeka-s.zip \
